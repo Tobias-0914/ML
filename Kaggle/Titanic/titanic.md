@@ -539,7 +539,7 @@ train_data[['Sex','Survived']].groupby(['Sex']).mean().plot.bar()
 fig, axis1 = plt.subplots(1,1,figsize=(18,6))
 train_data["Age_int"] = train_data["Age"].astype(int)
 average_age = train_data[["Age_int", "Survived"]].groupby(['Age_int'],as_index=False).mean()
-# sns.barplot(x='Age_int', y='Survived', data=average_age)
+sns.barplot(x='Age_int', y='Survived', data=average_age)
 ```
 
 
